@@ -1,0 +1,155 @@
+const cities = [ // make pr if u want more cities
+  { city: "New York", utcOffset: -5 },
+  { city: "Los Angeles", utcOffset: -8 },
+  { city: "London", utcOffset: 0 },
+  { city: "Paris", utcOffset: 1 },
+  { city: "Berlin", utcOffset: 1 },
+  { city: "Tokyo", utcOffset: 9 },
+  { city: "Sydney", utcOffset: 11 },
+  { city: "Moscow", utcOffset: 3 },
+  { city: "Cairo", utcOffset: 2 },
+  { city: "Rio de Janeiro", utcOffset: -3 },
+  { city: "New Delhi", utcOffset: 5.5 },
+  { city: "Shanghai", utcOffset: 8 },
+  { city: "Mexico City", utcOffset: -6 },
+  { city: "Johannesburg", utcOffset: 2 },
+  { city: "Dubai", utcOffset: 4 },
+  { city: "Singapore", utcOffset: 8 },
+  { city: "Seoul", utcOffset: 9 },
+  { city: "Istanbul", utcOffset: 3 },
+  { city: "Jakarta", utcOffset: 7 },
+  { city: "Chicago", utcOffset: -6 },
+  { city: "Houston", utcOffset: -6 },
+  { city: "Phoenix", utcOffset: -7 },
+  { city: "Philadelphia", utcOffset: -5 },
+  { city: "San Antonio", utcOffset: -6 },
+  { city: "San Diego", utcOffset: -8 },
+  { city: "Dallas", utcOffset: -6 },
+  { city: "San Jose", utcOffset: -8 },
+  { city: "Austin", utcOffset: -6 },
+  { city: "Jacksonville", utcOffset: -5 },
+  { city: "Fort Worth", utcOffset: -6 },
+  { city: "Columbus", utcOffset: -5 },
+  { city: "Charlotte", utcOffset: -5 },
+  { city: "Indianapolis", utcOffset: -5 },
+  { city: "San Francisco", utcOffset: -8 },
+  { city: "Seattle", utcOffset: -8 },
+  { city: "Miami", utcOffset: -5 },
+  { city: "Washington DC", utcOffset: -5 },
+  { city: "Boston", utcOffset: -5 },
+  { city: "Hong Kong", utcOffset: 8 },
+  { city: "Taipei", utcOffset: 8 },
+  { city: "El Paso", utcOffset: -7 },
+  { city: "Nashville", utcOffset: -6 },
+  { city: "Detroit", utcOffset: -5 },
+  { city: "London", utcOffset: 0 },
+  { city: "Paris", utcOffset: 1 },
+  { city: "Rome", utcOffset: 1 },
+  { city: "Berlin", utcOffset: 1 },
+  { city: "Madrid", utcOffset: 1 },
+  { city: "Amsterdam", utcOffset: 1 },
+  { city: "Barcelona", utcOffset: 1 },
+  { city: "Munich", utcOffset: 1 },
+  { city: "Milan", utcOffset: 1 },
+  { city: "Vienna", utcOffset: 1 },
+  { city: "Budapest", utcOffset: 1 },
+  { city: "Prague", utcOffset: 1 },
+  { city: "Warsaw", utcOffset: 1 },
+  { city: "Copenhagen", utcOffset: 1 },
+  { city: "Stockholm", utcOffset: 1 },
+  { city: "Helsinki", utcOffset: 2 },
+  { city: "Oslo", utcOffset: 1 },
+  { city: "Dublin", utcOffset: 0 },
+  { city: "Lisbon", utcOffset: 0 },
+  { city: "Athens", utcOffset: 2 },
+  { city: "Belgrade", utcOffset: 1 },
+  { city: "Bucharest", utcOffset: 2 },
+  { city: "Sofia", utcOffset: 2 },
+  { city: "Cairo", utcOffset: 2 },
+  { city: "Johannesburg", utcOffset: 2 },
+  { city: "Cape Town", utcOffset: 2 },
+  { city: "Dubai", utcOffset: 4 },
+  { city: "Tel Aviv", utcOffset: 2 },
+  { city: "Istanbul", utcOffset: 3 },
+  { city: "Zagreb", utcOffset: 1 },
+  { city: "Bratislava", utcOffset: 1 },
+  { city: "Ljubljana", utcOffset: 1 },
+  { city: "Riga", utcOffset: 2 },
+  { city: "Vilnius", utcOffset: 2 },
+  { city: "Tallinn", utcOffset: 2 },
+  { city: "Colorado Springs", utcOffset: -7 },
+  { city: "Memphis", utcOffset: -6 },
+  { city: "Portland", utcOffset: -8 },
+  { city: "Osaka", utcOffset: 9 },
+  { city: "Oklahoma City", utcOffset: -6 },
+  { city: "Las Vegas", utcOffset: -8 },
+  { city: "Louisville", utcOffset: -5 },
+  { city: "Baltimore", utcOffset: -5 },
+  { city: "Milwaukee", utcOffset: -6 },
+  { city: "Albuquerque", utcOffset: -7 },
+  { city: "Tucson", utcOffset: -7 },
+  { city: "Sacramento", utcOffset: -8 },
+  { city: "Mesa", utcOffset: -7 },
+  { city: "Kansas City", utcOffset: -6 },
+  { city: "Omaha", utcOffset: -6 },
+  { city: "Long Beach", utcOffset: -8 },
+  { city: "Virginia Beach", utcOffset: -5 },
+  { city: "Atlanta", utcOffset: -5 },
+  { city: "Colorado Springs", utcOffset: -7 },
+  { city: "Seoul", utcOffset: 9 },
+  { city: "Omaha", utcOffset: -6 },
+  { city: "Oakland", utcOffset: -8 },
+  { city: "Minneapolis", utcOffset: -6 },
+  { city: "Tulsa", utcOffset: -6 },
+  { city: "Tampa", utcOffset: -5 },
+  { city: "Honolulu", utcOffset: -10 },
+  { city: "Henderson", utcOffset: -8 },
+  { city: "Newark", utcOffset: -5 },
+  { city: "Fort Lauderdale", utcOffset: -5 },
+  { city: "Reno", utcOffset: -8 },
+  { city: "Arlington", utcOffset: -6 },
+  { city: "Coral Springs", utcOffset: -5 },
+  { city: "Tokyo", utcOffset: 9 },
+  { city: "Beijing", utcOffset: 8 },
+  { city: "Shanghai", utcOffset: 8 },
+  { city: "Hong Kong", utcOffset: 8 },
+  { city: "Singapore", utcOffset: 8 },
+  { city: "Seoul", utcOffset: 9 },
+  { city: "Bangkok", utcOffset: 7 },
+  { city: "Delhi", utcOffset: 5.5 },
+  { city: "Mumbai", utcOffset: 5.5 },
+  { city: "Jakarta", utcOffset: 7 },
+  { city: "Sydney", utcOffset: 11 },
+  { city: "Melbourne", utcOffset: 11 },
+  { city: "Perth", utcOffset: 8 },
+  { city: "Bristol", utcOffset: 0 },
+  { city: "Oxford", utcOffset: 0 },
+  { city: "Shelburne", utcOffset: -4 }
+];
+
+let currentCity = cities[Math.floor(Math.random() * cities.length)];
+let score = 0;
+
+function displayCity() {
+  document.getElementById("city").textContent = `What is the timezone for ${currentCity.city} in UTC?`;
+}
+
+function checkGuess() {
+  const guess = parseInt(document.getElementById("guess").value);
+  const resultElement = document.getElementById("result");
+  const scoreboard = document.getElementById("scoreboard");
+
+  if (guess === currentCity.utcOffset) {
+    resultElement.textContent = `Correct!`;
+    score++;
+    scoreboard.textContent = `Score: ${score}`;
+    currentCity = cities[Math.floor(Math.random() * cities.length)];
+    displayCity();
+  } else {
+    resultElement.textContent = `Incorrect. The correct timezone is UTC ${currentCity.utcOffset}.`;
+    currentCity = cities[Math.floor(Math.random() * cities.length)];
+    displayCity();
+  }
+}
+
+displayCity();

@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #242933;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #2E3440;
+  border-radius: 5px;
+  background-color: #2E3440;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #ECEFF4;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #42536B;
+  color: #ECEFF4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#result {
+  color: #f00;
+}
+
+#city {
+  color: #ECEFF4;
+}
+
+#scoreboard {
+  color: #ECEFF4;
+}
+
+/* i love stackoverflow */
