@@ -6,7 +6,7 @@ This game is written in only HTML, CSS, and JavaScript
 
 ## How to play
 
-You can clone these repo and open the `ìndex.html` file in your browser to play it locally
+You can clone the repo and open the `ìndex.html` file in your browser to play it locally
 
 or you can play the demo linked below.
 
