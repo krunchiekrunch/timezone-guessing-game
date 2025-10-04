@@ -10,6 +10,6 @@ You can clone the repo and open the `ìndex.html` file in your browser to play i
 
 or you can play the demo linked below.
 
-[Demo](https://radioactivepotato.github.io/timezone-guessing-game)
+[Demo](https://krunchiekrunch.github.io/timezone-guessing-game)
 
 If you want more cities to be added, feel free to create a issue or PR.
